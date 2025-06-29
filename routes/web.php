@@ -5,6 +5,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\TryController;
 use App\Http\Controllers\Calculator;
+use App\Http\Controllers\UserController;
 
 
 
@@ -31,6 +32,9 @@ Route::get('/login',[AboutController::class,'login']);
 Route::get('/try',[TryController::class,'try']);
 
 Route::get('/calculator/view',[Calculator::class,'calculator']);
+
+Route::get('/user',[UserController::class,'userDetail']);
+
 Route::post('/calculator/calculate',[Calculator::class,'calculate'])->name('calculator');
 
 
